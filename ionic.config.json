@@ -1,0 +1,7 @@
+{
+  "name": "PracticeProject",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
