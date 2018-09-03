@@ -10,17 +10,20 @@
 
 <ion-content padding>
 
-  <h3>Welcome to your first Ionic app!</h3>
+  <h3>Welcome to Ionic app!</h3>
 
-  <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-  <p>   ny67
-    
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>
+  <ion-list>
+
+  <ion-item>
+    <ion-input type="text" placeholder="Username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" placeholder="Password"></ion-input>
+  </ion-item>
+
+  <button ion-button round full (click)="goChat()"><strong ion-text text-capitalize>Log In</strong></button>
+
+</ion-list>
 
 </ion-content>
