@@ -14,16 +14,37 @@
 
   <ion-list>
 
-  <ion-item>
+<ion-row padding-bottom>
+  <ion-item padding-top>
     <ion-input type="text" placeholder="Username"></ion-input>
   </ion-item>
+</ion-row>
 
-  <ion-item>
+<ion-row padding-bottom>
+  <ion-item padding-top>
     <ion-input type="password" placeholder="Password"></ion-input>
   </ion-item>
+</ion-row>
 
-  <button ion-button round full (click)="goChat()"><strong ion-text text-capitalize>Log In</strong></button>
+<ion-row padding-bottom>
+  <button ion-button round full (click)="goToHome()">
+    <strong ion-text text-capitalize>Log In</strong>
+  </button>
+</ion-row>
+
+<ion-row padding-bottom>
+  <button ion-button round full (click)="goToSignup()">
+    <strong ion-text text-capitalize>Sign In</strong>
+  </button>
+</ion-row>
+
+<ion-row padding-bottom>
+  <button ion-button clear full (click)="goToForgotpw()">
+    <strong ion-text text-capitalize >Forgot Password?</strong>
+  </button>
+</ion-row>
 
 </ion-list>
 
 </ion-content>
+
