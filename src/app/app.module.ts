@@ -4,8 +4,6 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ItemDetailsPage } from '../pages/item-details/item-details';
-import { ListPage } from '../pages/list/list';
 import { HomePage } from '../pages/home/home';
 import { ChatPage } from '../pages/chat/chat';
 import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
@@ -17,6 +15,9 @@ import { ResultPage } from '../pages/result/result';
 import { StudentlistPage } from '../pages/studentlist/studentlist';
 import { BirthdayPage } from '../pages/birthday/birthday';
 import { AttendencePage } from '../pages/attendence/attendence';
+import { NoticePage } from '../pages/notice/notice';
+import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
+const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,8 +26,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HelloIonicPage,
-    ItemDetailsPage,
-    ListPage,
     HomePage,
     ChatPage,
     ForgotpasswordPage,
@@ -37,18 +36,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ResultPage,
     StudentlistPage,
     BirthdayPage,
-    AttendencePage
+    AttendencePage,
+    NoticePage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    SocketIoModule.forRoot(config)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HelloIonicPage,
-    ItemDetailsPage,
-    ListPage,
     HomePage,
     ChatPage,
     ForgotpasswordPage,
@@ -59,7 +58,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ResultPage,
     StudentlistPage,
     BirthdayPage,
-    AttendencePage
+    AttendencePage,
+    NoticePage
   ],
   providers: [
     StatusBar,

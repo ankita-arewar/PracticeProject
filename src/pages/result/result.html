@@ -14,5 +14,47 @@
 
 
 <ion-content padding>
+	<ion-list>
+		<ion-row padding-bottom>
+		  <ion-item padding-top>
+		    <ion-input type="text" placeholder="Username"></ion-input>
+		  </ion-item>
+		</ion-row>
 
+		<ion-row padding-bottom>
+		  <ion-item padding-top>
+		    <ion-input type="Text" placeholder="Roll No."></ion-input>
+		  </ion-item>
+		</ion-row>
+
+		<ion-row padding-bottom>
+		  <ion-item padding-top>
+		    <ion-input type="Text" placeholder="Branch"></ion-input>
+		  </ion-item>
+		</ion-row>
+
+		<ion-item>
+		  <ion-label>Status</ion-label>
+		  <ion-select [(ngModel)]="status">
+		    <ion-option value="R">Regular</ion-option>
+		    <ion-option value="IR">Irregular</ion-option>
+		  </ion-select>
+		</ion-item>
+
+		<ion-item>
+		  <ion-label>Year</ion-label>
+		    <ion-select [(ngModel)]="year">
+		    <ion-option value="sem1">sem1</ion-option>
+		    <ion-option value="sem2">sem2</ion-option>
+		    <ion-option value="sem3">sem3</ion-option>
+		    <ion-option value="sem4">sem4</ion-option>
+		  </ion-select>
+		</ion-item>
+
+		<ion-row padding-top>
+		  <button ion-button round full (click)="goToHome()">
+		    <strong ion-text text-capitalize>Check Result</strong>
+		  </button>
+		</ion-row>
+	</ion-list>
 </ion-content>

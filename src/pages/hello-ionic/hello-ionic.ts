@@ -3,7 +3,8 @@ import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { ForgotpasswordPage } from '../forgotpassword/forgotpassword';
 import { SignupPage } from '../signup/signup';
-
+import { Socket } from 'ng-socket-io';
+import { Chatpage } from '../chat/chat';
 
 @Component({
   selector: 'page-hello-ionic',
@@ -11,8 +12,9 @@ import { SignupPage } from '../signup/signup';
 })
 
 export class HelloIonicPage {
+	username= '';
   
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private socket: Socket) {
   	}
 
   	goToHome() {
@@ -25,6 +27,12 @@ export class HelloIonicPage {
 
 	goToSignup(){
 		this.navCtrl.push(SignupPage);
+	}
+
+	goToChat(){
+		this.socket.connect();
+	    this.socket.emit('Username', this.username);
+	    this.navCtrl.push('ChatPage', { username: this.username });
 	}
 
 }

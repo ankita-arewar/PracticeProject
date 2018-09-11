@@ -14,5 +14,30 @@
 
 
 <ion-content padding>
+	<ion-list>
+		<ion-row padding-bottom>
+		  <ion-item padding-top>
+		    <ion-input type="text" placeholder="Username"></ion-input>
+		  </ion-item>
+		</ion-row>
+
+		<ion-row padding-bottom>
+		  <ion-item padding-top>
+		    <ion-input type="Text" placeholder="Roll No."></ion-input>
+		  </ion-item>
+		</ion-row>
+
+		<ion-row padding-bottom>
+		  <ion-item padding-top>
+		    <ion-input type="Text" placeholder="Branch"></ion-input>
+		  </ion-item>
+		</ion-row>
+		
+		<ion-row padding-top>
+		  <button ion-button round full (click)="goToHome()">
+		    <strong ion-text text-capitalize>Check Attendence</strong>
+		  </button>
+		</ion-row>
+	</ion-list>
 
 </ion-content>

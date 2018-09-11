@@ -1,0 +1,19 @@
+{
+  "name": "socketserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test123"
+  },
+  "repository": {
+    "type": "git",
+    "url": "PracticeProject"
+  },
+  "author": "ankita-arewar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
+}

@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { NoticePage } from '../notice/notice';
-
 
 /**
- * Generated class for the NoticeboardPage page.
+ * Generated class for the NoticePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,19 +10,16 @@ import { NoticePage } from '../notice/notice';
 
 @IonicPage()
 @Component({
-  selector: 'page-noticeboard',
-  templateUrl: 'noticeboard.html',
+  selector: 'page-notice',
+  templateUrl: 'notice.html',
 })
-export class NoticeboardPage {
+export class NoticePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NoticeboardPage');
+    console.log('ionViewDidLoad NoticePage');
   }
 
-  goToNotice(){
-  	this.navCtrl.push(NoticePage);
-  }
 }
